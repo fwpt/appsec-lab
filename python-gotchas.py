@@ -62,7 +62,7 @@ b, c = a  # automatically unpacks tuple values to b and c
 # Variant 1: +
 list1 = [1,2,3]
 list2 = list1
-list2 = list1 + [4,5]
+list2 = list2 + [4,5]  # or list2 = list1 + [4,5], same result
 # Result:
 #  list1 [1, 2, 3] 
 #  list2 [1, 2, 3, 4, 5]
@@ -113,7 +113,7 @@ def some_function():
 	# g_var1 in the local scope of this function will reference to global g_var1
 	# no UnboundLocalError will be thrown which might result in unexpected behaviour.
 	# Especially for common var names like i, j, n, etc.
-	# Note: see what happens to g_var3 below though.
+	# Note: also see what happens to g_var3 below.
 	print('g_var1 exists here:', g_var1) # Result: 1, not UnboundLocalError
 
 	# The following assignment creates a new local var.
